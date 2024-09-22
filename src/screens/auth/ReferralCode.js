@@ -73,7 +73,7 @@ export default function ReferralCode() {
           </Button>
           <Grid container >
             <Grid item>
-              <Link href="/home" variant="body2">
+              <Link href="/" variant="body2">
                 I don't have a referral code
               </Link>
             </Grid>
