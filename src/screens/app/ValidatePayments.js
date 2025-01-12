@@ -30,7 +30,7 @@ export default function ValidatePayments() {
   const [paymentDetails, setPaymentDetails] = useState({})
   const [messageError, setMessageError] = useState(false)
   useEffect(() => {
-    fetch('https://victonictechnologies.github.io/SurveysDetails/packages.json')
+    fetch('https://raw.githubusercontent.com/surveyiz/SurveysDetails/refs/heads/main/packages.json')
       .then(response => response.json())
       .then((data) => (
         setPackageItem(data.surveyPlans[location.state.index]), setPaymentDetails(data.mpesaPaymentDetails), setProgress(false)
