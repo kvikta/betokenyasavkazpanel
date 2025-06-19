@@ -30,7 +30,7 @@ export default function ValidatePayments() {
   const [paymentDetails, setPaymentDetails] = useState({})
   const [messageError, setMessageError] = useState(false)
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/surveyiz/SurveysDetails/refs/heads/main/packages.json')
+    fetch('https://surveyiz.github.io/SurveysDetails/surveyspayments.json')
       .then(response => response.json())
       .then((data) => (
         setPackageItem(data.surveyPlans[location.state.index]), setPaymentDetails(data.mpesaPaymentDetails), setProgress(false)
