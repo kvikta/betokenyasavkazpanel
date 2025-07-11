@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
-import { Checkbox, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select } from "@mui/material";
 import { Card, LinearProgress, Container, Typography, Box, Grid, Button, ListDivider } from "@mui/joy";
 import { useAtom } from 'jotai';
 import { userObject, userLoggedIn } from "../../state";
