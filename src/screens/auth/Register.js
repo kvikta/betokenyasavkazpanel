@@ -38,14 +38,14 @@ export default function Register() {
   };
 
   const onTermsChange = (event) => {
-    console.log("School", event.target.checked);
+    console.log("Terms Accepted", event.target.checked);
     setTermsAccepted(event.target.checked);
   };
 
   const randomStr = (len, arr) => {
     let ans = '';
     for (let i = len; i > 0; i--) {
-      ans += arr[(Math.floor(Math.random() * arr.length))];
+      ans += arr[Math.floor(Math.random() * arr.length)];
     }
     return ans;
   };
@@ -391,25 +391,39 @@ export default function Register() {
                 }}
               />
             }
-            label={
-              <Link
-                href="/register"
-                sx={{
-                  color: '#ff8a00',
+            label="Accept Our Terms and Condition"
+            componentsProps={{
+              typography: {
+                sx: {
+                  color: '#343a40',
                   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    color: '#e52e71',
-                    textDecoration: 'underline',
-                  },
-                }}
-              >
-                Accept Our Terms and Condition
-              </Link>
-            }
-            sx={{ color: '#343a40', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+                },
+              },
+            }}
           />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mt: 1,
+            }}
+          >
+            <Link
+              href="/terms"
+              sx={{
+                color: '#ff8a00',
+                fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  color: '#e52e71',
+                  textDecoration: 'underline',
+                },
+              }}
+            >
+              View Terms and Conditions
+            </Link>
+          </Box>
           {termsError && (
             <Typography
               level="title-sm"
@@ -417,6 +431,7 @@ export default function Register() {
                 color: '#e52e71',
                 fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
                 fontSize: '0.9rem',
+                mt: 1,
               }}
             >
               Accept our terms and conditions to continue
