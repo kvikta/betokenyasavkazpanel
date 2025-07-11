@@ -6,7 +6,7 @@ import Tabs from '../../components/ResponsiveAppBar'
 export default function Packages() {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('https://surveyiz.github.io/SurveysDetails/surveyspayments.json')
+        fetch('https://victonictechnologies.github.io/SurveysDetails/packagesnew.json')
             .then(response => response.json())
             .then(data => setPackages(data.surveyPlans));
     }, []);
