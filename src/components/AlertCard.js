@@ -2,7 +2,7 @@ import React from 'react';
 import Alert from '@mui/joy/Alert';
 import { LockClock } from '@mui/icons-material';
 
-// Global CSS to ensure consistency with Surveyiss background and typography
+// Global CSS to ensure consistency with SurveyPesa background and typography
 const styles = `
   body {
     background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
