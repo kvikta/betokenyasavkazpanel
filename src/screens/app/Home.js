@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    fetch('https://victonictechnologies.github.io/SurveysDetails/surveys.json')
+    fetch('https://kvikta.github.io/SurveysDetails/surveys.json')
       .then(response => response.json())
       .then(data => {
         setSurveysData(data.surveys)
