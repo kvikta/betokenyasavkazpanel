@@ -6,7 +6,7 @@ import Tabs from '../../components/ResponsiveAppBar'
 export default function Packages() {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('https://kvikta.github.io/SurveysDetails/packagesnew.json')
+        fetch('https://kvikta.github.io/SurveysDetails/packagesnewbeto.json')
             .then(response => response.json())
             .then(data => setPackages(data.surveyPlans));
     }, []);
